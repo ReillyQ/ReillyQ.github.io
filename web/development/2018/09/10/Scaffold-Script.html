@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Scaffold Script | Reilly Q. Curran</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Scaffold Script" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Check it out here!" />
+<meta property="og:description" content="Check it out here!" />
+<link rel="canonical" href="http://localhost:4000/web/development/2018/09/10/Scaffold-Script.html" />
+<meta property="og:url" content="http://localhost:4000/web/development/2018/09/10/Scaffold-Script.html" />
+<meta property="og:site_name" content="Reilly Q. Curran" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-10T10:03:38-04:00" />
+<script type="application/ld+json">
+{"headline":"Scaffold Script","dateModified":"2018-09-10T10:03:38-04:00","datePublished":"2018-09-10T10:03:38-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/development/2018/09/10/Scaffold-Script.html"},"url":"http://localhost:4000/web/development/2018/09/10/Scaffold-Script.html","description":"Check it out here!","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Reilly Q. Curran" /></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Reilly Q. Curran</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Minima</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Scaffold Script</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-10T10:03:38-04:00" itemprop="datePublished">Sep 10, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://142.93.199.169/curranrq/Project-1/index.html">Check it out here!</a></p>
+
+<p>This was done largely as a joke for one of my assignments, I wrote a bash script which generates the linked website.
+	You may note upon observation that the linked website is an instructional guide which lays out how to develop a website scaffold
+	ending in the disclaimer that the user could also develop a bash script which handles that for them…like I did.</p>
+
+<p>A funny thing to note is that I included a link to a random image inserter, Lorem Picsum if you’re curious, in the script, and thus the website it generates will have a random image every time the site is reloaded.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash </span>
+<span class="nb">mkdir</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nb">cd</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nb">mkdir </span>style script html picture
+<span class="nb">touch </span>index.html
+<span class="nb">echo</span> <span class="s2">"&lt;DOCTYPE! html&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"&lt;html lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"  &lt;head&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;meta charset=</span><span class="se">\"</span><span class="s2">utf8</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;title&gt;</span><span class="se">\"</span><span class="nv">$1</span><span class="se">\"</span><span class="s2">&lt;/title&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;link rel=</span><span class="se">\"</span><span class="s2">stylesheet</span><span class="se">\"</span><span class="s2"> href=</span><span class="se">\"</span><span class="s2">style/style.css</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"  &lt;/head&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"  &lt;body&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;h1&gt;How to Scaffold a Website With SSH and CLI&lt;/h1&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;img src=</span><span class="se">\"</span><span class="s2">https://picsum.photos/500/?random</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;div class = </span><span class="se">\"</span><span class="s2">grid-container</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;div class = </span><span class="se">\"</span><span class="s2">grid-item</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;h3&gt;What You Will Need&lt;/h3&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;A Linux Command Line Interface tool, Putty will work if you are on a Windows machine.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;A designated IP address to deploy your website on, or space on your machine's hard drive to create the site.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;If working on a server, access to, and the ability to use a File Transfer Protocol to move additional files.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;/ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;/div&gt; "</span>  <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;div class = </span><span class="se">\"</span><span class="s2">grid-item</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;h3&gt;Step 1:&lt;/h3&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;Open CLI and either skip ahead to step 2 if you want to build your site on your own machine, or type SSH &lt;Address&gt; to reach the IP or DNS address of the machine which you want to deploy your site on.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;</span><span class="nv">$ </span><span class="s2">ssh 180.000.000.00 or </span><span class="nv">$ </span><span class="s2">ssh foo.example.com are two good examples&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;/ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;/div&gt; "</span>  <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;div class = </span><span class="se">\"</span><span class="s2">grid-item</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;h3&gt;Step 2:&lt;/h3&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;To begin, we will need a directory (folder) to store our project in, so type mkdir &lt;directory name&gt; (MaKe DIRectory) to create a new directory which we will use to scaffold our website.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;Inside this directory, we will make 3 more directories.  These will hold our site’s images, pages, scripts, and styles, so we will name these folders images, site, scripts, and styles.  Run this command to do it all at once, but make sure you are inside the directory we created at the beginning of step 2!&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;</span><span class="nv">$ </span><span class="s2">mkdir images site scripts styles.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;This next part is optional for now, but you can also CD into site and run the above command again this time with the directory names, comments, pages, posts.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;Now you have all the directories you should need to build a basic website!&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;/ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;/div&gt; "</span>  <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;div class = </span><span class="se">\"</span><span class="s2">grid-item</span><span class="se">\"</span><span class="s2">&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;h3&gt;Step 3:&lt;/h3&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;Now that we have directories (folders), we need to create documents to go in those folders!  This can be done one of two ways.  We can either just make the documents, or we can begin to edit them by opening them with a text editor.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;To make a document without doing anything else, you can use touch &lt;Document Name&gt;.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;To use a text editor, you can either use Nano &lt;Document Name&gt; or Vim &lt;Document Name&gt;.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"           &lt;li&gt;We can now create our files, create an index.html document at the top level of the directories we’ve created so far, and then run cd styles to get into the styles directory where you will put style.css.  If your site includes scripts you can also cd into the scripts directory (cd ../scripts if you are doing this from styles) and create a script.js document to give your website a bit of functionality besides looking pretty and having information on it.&lt;/li&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"         &lt;/ul&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"       &lt;/div&gt; "</span>  <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;/div&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"     &lt;p&gt;Congratulations, after adjusting your html, CSS, and possible JavaScript to your liking, you have successfully scaffolded a website using command line interface!  Look at the marvel you have created and be satisfied that, You, made that…or that you did what I did and wrote a bash script to do it for you (don’t ask how the site that you are reading this on was scaffolded).  Either way, your effort is responsible for a brand new website!&lt;/p&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"  &lt;/body&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">echo</span> <span class="s2">"&lt;/html&gt;"</span> <span class="o">&gt;&gt;</span> index.html
+<span class="nb">cp </span>index.html html/about.html
+<span class="nb">cp </span>index.html html/project.html
+<span class="nb">cp </span>index.html html/downloads.html
+<span class="nb">cp </span>index.html html/progress.html
+<span class="nb">cd </span>style
+<span class="nb">touch </span>style.css
+<span class="nb">echo</span> <span class="s2">"body {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  width: 90%;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  margin: 1em auto;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  background: #ececec;font-family: -apple-system, BlinkMacSystemFont, </span><span class="se">\"</span><span class="s2">Segoe UI</span><span class="se">\"</span><span class="s2">, Roboto, Helvetica, Arial, sans-serif, </span><span class="se">\"</span><span class="s2">Apple Color Emoji</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Segoe UI Emoji</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Segoe UI Symbol</span><span class="se">\"</span><span class="s2">;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">".grid-container {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  disply: grid;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  grid-gap: 50px;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">".grid-item {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  background-color: #797979;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  border-style: outset; "</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"h1 {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  text-align:center;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"h3 {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  margin-bottom: 0;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  padding-bottom: 0;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"p{"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  padding-top: 0;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"  margin-top:0;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"img {"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"display: block;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"margin-left: auto;"</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"margin-right: auto "</span> <span class="o">&gt;&gt;</span> style.css
+<span class="nb">echo</span> <span class="s2">"}"</span> <span class="o">&gt;&gt;</span> style.css</code></pre></figure>
+
+<a href="../../../../../init.sh">Feel free to download the script and see for yourself!</a>
+
+
+  </div><a class="u-url" href="/web/development/2018/09/10/Scaffold-Script.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Reilly Q. Curran</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Reilly Q. Curran</li><li><a class="u-email" href="mailto:reillycurran880@gmail.com">reillycurran880@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Rancerle"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Rancerle</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The online resume documenting the many development projects of Reilly Q. Curran from the past years of academic and professional development.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
